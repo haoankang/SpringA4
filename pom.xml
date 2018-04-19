@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Chapter_07</module>
+        <module>Chapter_08</module>
     </modules>
 
 
