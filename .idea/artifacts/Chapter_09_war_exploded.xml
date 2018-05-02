@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Chapter_08:war exploded">
-    <output-path>$PROJECT_DIR$/Chapter_08/target/Chapter_08</output-path>
+  <artifact type="exploded-war" name="Chapter_09:war exploded">
+    <output-path>$PROJECT_DIR$/Chapter_09/target/Chapter_09</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="Chapter_08" />
+          <element id="module-output" name="Chapter_09" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.4.RELEASE" />
@@ -15,16 +15,16 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-webflow:2.5.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-binding:2.5.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.0" />
-          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Chapter_08/target/Chapter_08/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/Chapter_09/target/Chapter_09/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="Chapter_08/web/Web" />
+      <element id="javaee-facet-resources" facet="Chapter_09/web/Web" />
     </root>
   </artifact>
 </component>

@@ -3,12 +3,21 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Chapter_07" />
     <file type="web" url="file://$PROJECT_DIR$/Chapter_08" />
+    <file type="web" url="file://$PROJECT_DIR$/Chapter_09" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Chapter_07/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter_08/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter_09/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter_10/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
