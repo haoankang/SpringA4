@@ -9,7 +9,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="Chapter_10" target="1.5" />
+      <module name="Chapter_11" target="1.5" />
+      <module name="Chapter_12" target="1.5" />
       <module name="SpringA4" target="1.5" />
     </bytecodeTargetLevel>
   </component>
