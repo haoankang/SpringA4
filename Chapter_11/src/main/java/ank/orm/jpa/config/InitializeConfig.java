@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -19,13 +20,15 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
 @ComponentScan("ank.orm.jpa")
-@EnableTransactionManagement
+//@EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "ank.orm.jpa.repository", entityManagerFactoryRef = "entityManagerFactoryBean")
 public class InitializeConfig {
 
     @Bean
@@ -48,7 +51,7 @@ public class InitializeConfig {
                 = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource);
         entityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter);
-        entityManagerFactoryBean.setPersistenceUnitName("User");
+        entityManagerFactoryBean.setPersistenceUnitName("user");
         entityManagerFactoryBean.setPackagesToScan("ank.orm.jpa.domain");
         return entityManagerFactoryBean;
     }
@@ -72,4 +75,22 @@ public class InitializeConfig {
     public PersistenceAnnotationBeanPostProcessor beanPostProcessor2(){
         return new PersistenceAnnotationBeanPostProcessor();
     }
+
+    @Bean
+    public JpaTransactionManager transactionManager() {
+        return new JpaTransactionManager(); // does this need an emf???
+    }
+
+//    @Configuration
+//    @EnableTransactionManagement
+//    public static class TransactionConfig implements TransactionManagementConfigurer {
+//        @Inject
+//        private EntityManagerFactory entityManagerFactoryBean;
+//
+//        public PlatformTransactionManager annotationDrivenTransactionManager() {
+//            JpaTransactionManager transactionManager = new JpaTransactionManager();
+//            transactionManager.setEntityManagerFactory(entityManagerFactoryBean);
+//            return transactionManager;
+//        }
+//    }
 }

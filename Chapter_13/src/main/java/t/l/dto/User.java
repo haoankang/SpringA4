@@ -1,18 +1,13 @@
-package ank.orm.jpa.domain;
+package t.l.dto;
 
-import javax.persistence.*;
+import java.io.Serializable;
 
-@Entity(name = "user")
-public class User {
+public class User implements Serializable{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column
     private String name;
 
-    @Column
     private Integer age;
 
     public Integer getId() {
@@ -39,11 +34,20 @@ public class User {
         this.age = age;
     }
 
+    public User() {
+    }
+
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
 
-    public User() {
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

@@ -1,12 +1,8 @@
 package ank.orm.jpa.repository;
 
 import ank.orm.jpa.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository {
+public interface UserRepository extends JpaRepository<User, Integer>{
 
-    void add(User user);
-
-    int update(User user);
-
-    int delete(User user);
 }
