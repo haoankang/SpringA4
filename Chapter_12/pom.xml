@@ -11,7 +11,7 @@
     <artifactId>Chapter_12</artifactId>
     <packaging>war</packaging>
     <!-- TODO project name  -->
-    <name>quickstart</name>
+    <name>Chapter_12</name>
     <description></description>
 
     <!-- TODO
@@ -124,12 +124,6 @@
                 </excludes>
             </testResource>
         </testResources>
-        <plugins>
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 
     <properties>
